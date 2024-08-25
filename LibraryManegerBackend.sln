@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManegerBackend", "LibraryManegerBackend\LibraryManegerBackend.csproj", "{FFE3F376-FADC-4655-B3C4-948EAB7A8556}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManegerBackend.Core", "LibraryManegerBackend.Core\LibraryManegerBackend.Core.csproj", "{939EC026-E1D9-4233-B890-261FF2744CF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManegerBackend.Storage", "LibraryManegerBackend.Storage\LibraryManegerBackend.Storage.csproj", "{EBC9F8C0-31CB-4B81-8891-BB542F9A5B17}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFE3F376-FADC-4655-B3C4-948EAB7A8556}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFE3F376-FADC-4655-B3C4-948EAB7A8556}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFE3F376-FADC-4655-B3C4-948EAB7A8556}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFE3F376-FADC-4655-B3C4-948EAB7A8556}.Release|Any CPU.Build.0 = Release|Any CPU
+		{939EC026-E1D9-4233-B890-261FF2744CF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{939EC026-E1D9-4233-B890-261FF2744CF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{939EC026-E1D9-4233-B890-261FF2744CF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{939EC026-E1D9-4233-B890-261FF2744CF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBC9F8C0-31CB-4B81-8891-BB542F9A5B17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBC9F8C0-31CB-4B81-8891-BB542F9A5B17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBC9F8C0-31CB-4B81-8891-BB542F9A5B17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBC9F8C0-31CB-4B81-8891-BB542F9A5B17}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

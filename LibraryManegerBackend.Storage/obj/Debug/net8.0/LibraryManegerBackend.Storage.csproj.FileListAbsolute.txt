@@ -1,0 +1,17 @@
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Storage\bin\Debug\net8.0\LibraryManegerBackend.Storage.deps.json
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Storage\bin\Debug\net8.0\LibraryManegerBackend.Storage.runtimeconfig.json
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Storage\bin\Debug\net8.0\LibraryManegerBackend.Storage.dll
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Storage\bin\Debug\net8.0\LibraryManegerBackend.Storage.pdb
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Storage\bin\Debug\net8.0\LibraryManegerBackend.Core.dll
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Storage\bin\Debug\net8.0\LibraryManegerBackend.Core.pdb
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Storage\obj\Debug\net8.0\LibraryManegerBackend.Storage.csproj.AssemblyReference.cache
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Storage\obj\Debug\net8.0\LibraryManegerBackend.Storage.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Storage\obj\Debug\net8.0\LibraryManegerBackend.Storage.AssemblyInfoInputs.cache
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Storage\obj\Debug\net8.0\LibraryManegerBackend.Storage.AssemblyInfo.cs
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Storage\obj\Debug\net8.0\LibraryManegerBackend.Storage.csproj.CoreCompileInputs.cache
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Storage\obj\Debug\net8.0\LibraryM.BF4730F3.Up2Date
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Storage\obj\Debug\net8.0\LibraryManegerBackend.Storage.dll
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Storage\obj\Debug\net8.0\refint\LibraryManegerBackend.Storage.dll
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Storage\obj\Debug\net8.0\LibraryManegerBackend.Storage.pdb
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Storage\obj\Debug\net8.0\LibraryManegerBackend.Storage.genruntimeconfig.cache
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Storage\obj\Debug\net8.0\ref\LibraryManegerBackend.Storage.dll

@@ -1,0 +1,14 @@
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Core\bin\Debug\net8.0\LibraryManegerBackend.Core.deps.json
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Core\bin\Debug\net8.0\LibraryManegerBackend.Core.runtimeconfig.json
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Core\bin\Debug\net8.0\LibraryManegerBackend.Core.dll
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Core\bin\Debug\net8.0\LibraryManegerBackend.Core.pdb
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Core\obj\Debug\net8.0\LibraryManegerBackend.Core.csproj.AssemblyReference.cache
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Core\obj\Debug\net8.0\LibraryManegerBackend.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Core\obj\Debug\net8.0\LibraryManegerBackend.Core.AssemblyInfoInputs.cache
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Core\obj\Debug\net8.0\LibraryManegerBackend.Core.AssemblyInfo.cs
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Core\obj\Debug\net8.0\LibraryManegerBackend.Core.csproj.CoreCompileInputs.cache
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Core\obj\Debug\net8.0\LibraryManegerBackend.Core.dll
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Core\obj\Debug\net8.0\refint\LibraryManegerBackend.Core.dll
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Core\obj\Debug\net8.0\LibraryManegerBackend.Core.pdb
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Core\obj\Debug\net8.0\LibraryManegerBackend.Core.genruntimeconfig.cache
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Core\obj\Debug\net8.0\ref\LibraryManegerBackend.Core.dll
