@@ -6,12 +6,12 @@ namespace LibraryManegerBackend.Core.Services;
 public class BookService : IBookService
 {
     private readonly IRepository _repository;
-    
-    public BookService()
+
+    public BookService(IRepository repository)
     {
-        
+        _repository = repository;
     }
-    
+
     public Task<Book> AddBook(Book book)
     {
         return _repository.Add(book);
@@ -31,5 +31,10 @@ public class BookService : IBookService
     public Task DeleteBook(int id)
     {
         return _repository.Delete<Book>(id);
+    }
+
+    public Task<Book> FindBookById(int id)
+    {
+        return _repository.GetById<Book>(id);
     }
 }

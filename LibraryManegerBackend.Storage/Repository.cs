@@ -7,7 +7,7 @@ public class Repository : IRepository
     private readonly LibraryContext _context;
 
 
-    Repository(LibraryContext context)
+    public Repository(LibraryContext context)
     {
         _context = context;
     }

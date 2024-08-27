@@ -12,3 +12,4 @@ C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Core\ob
 C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Core\obj\Debug\net8.0\LibraryManegerBackend.Core.pdb
 C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Core\obj\Debug\net8.0\LibraryManegerBackend.Core.genruntimeconfig.cache
 C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Core\obj\Debug\net8.0\ref\LibraryManegerBackend.Core.dll
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend.Core\obj\Debug\net8.0\LibraryManegerBackend.Core.sourcelink.json

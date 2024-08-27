@@ -140,3 +140,5 @@ C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend\obj\Deb
 C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend\obj\Debug\net8.0\LibraryManegerBackend.pdb
 C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend\obj\Debug\net8.0\LibraryManegerBackend.genruntimeconfig.cache
 C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend\obj\Debug\net8.0\ref\LibraryManegerBackend.dll
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend\obj\Debug\net8.0\LibraryManegerBackend.sourcelink.json
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
