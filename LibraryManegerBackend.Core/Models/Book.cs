@@ -13,5 +13,5 @@ public class Book
     [Required]
     public int CategoryId { get; set; }
     public Category Category { get; set; }
-    public ICollection<Borrow> Borrows { get; set; }
+    public ICollection<Borrow> Borrows { get; set; } = new List<Borrow>();
 }

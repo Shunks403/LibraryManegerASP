@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ATBuMj5wZyEtzCuxla/XzZ+F7bm0WeXFo8TbE0VcuUlLvwgL0sjS4oCGmSL33bdyjYOu0zJjjKoiWklzUTiA5w==",
+  "dgSpecHash": "p3DpOg5K39AqW3rXiwYOqqvYHLfQzEMxDEW/0f7hxOmZCqYGjjYAETBAaDIWwdzI2O96Onp6lC3sDy4b9zeNkA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Nazar\\RiderProjects\\LibraryManegerBackend\\LibraryManegerBackend.Core\\LibraryManegerBackend.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nazar\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Nazar\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\Nazar\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Nazar\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Nazar\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\Nazar\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.3\\microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",

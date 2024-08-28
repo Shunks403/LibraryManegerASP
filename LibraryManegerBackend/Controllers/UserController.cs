@@ -1,5 +1,7 @@
-﻿using LibraryManegerBackend.Core.Interfaces;
+﻿using AutoMapper;
+using LibraryManegerBackend.Core.Interfaces;
 using LibraryManegerBackend.Core.Models;
+using MessangerBackend.DTO;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,11 +14,12 @@ public class UserController : ControllerBase
 {
 
     private readonly IUserService _userService;
+    private readonly IMapper _mapper;
 
-
-    public UserController(IUserService userService)
+    public UserController(IUserService userService, IMapper mapper)
     {
         _userService = userService;
+        _mapper = mapper;
     }
 
         [HttpGet("{id}")]
@@ -29,15 +32,16 @@ public class UserController : ControllerBase
                 return NotFound();
             }
 
-            return Ok(user);
+            return Ok(_mapper.Map<UserDTO>(user));
         }
 
        
         
         [HttpPut("{id}")]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> UpdateUser(int id, [FromQuery] User user)
+        public async Task<IActionResult> UpdateUser(int id, [FromBody] UserDTO userDtO)
         {
+            var user = _mapper.Map<User>(userDtO);
             if (id != user.Id)
                 return BadRequest("User ID mismatch");
 
@@ -45,9 +49,9 @@ public class UserController : ControllerBase
             if (existingUser == null)
                 return NotFound();
 
-            existingUser.Username = user.Username;
-            existingUser.Password = user.Password;
-            existingUser.Role = user.Role;
+            existingUser.Username = userDtO.Username;
+            existingUser.Password = userDtO.Password;
+            existingUser.Role = userDtO.Role;
 
             try
             {

@@ -1,25 +1,33 @@
 using System.Text;
 using LibraryManegerBackend.Core.Interfaces;
-using LibraryManegerBackend.Core.Models;
 using LibraryManegerBackend.Core.Services;
 using LibraryManegerBackend.Storage;
+using MessangerBackend.Core.Interfaces;
+using MessangerBackend.Core.Security;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var connectionString = builder.Configuration.GetConnectionString("Local");
+var SessionTimeout = (int)builder.Configuration.GetValue(typeof(int), "SessionTimeout");
+var TokenKey = builder.Configuration.GetValue<string>("TokenKey");
+
 // Add services to the container.
-builder.Services.AddDbContext<LibraryContext>(opt =>opt.UseSqlServer(("Data Source=DESKTOP-QSKA3AR;Initial Catalog=LibraryDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False")));
+builder.Services.AddDbContext<LibraryContext>(opt =>opt.UseSqlServer((connectionString)));
 
 builder.Services.AddTransient<IRepository, Repository>();
 builder.Services.AddTransient<IBookService, BookService>();
 builder.Services.AddTransient<IUserService, UserService>();
+builder.Services.AddTransient<IAuthorService, AuthorService>();
+builder.Services.AddTransient<ICategoryService, CategoryService>();
+builder.Services.AddTransient<IPasswordHasher, PasswordHasher>();
+
 builder.Services.AddControllers();
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromMinutes(5);
+    options.IdleTimeout = TimeSpan.FromMinutes(SessionTimeout);
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
@@ -31,15 +39,24 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         options.TokenValidationParameters = new TokenValidationParameters()
         {
             ValidateIssuerSigningKey = true,
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration.GetValue<string>("TokenKey")!)),
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(TokenKey!)),
             ValidateIssuer = false,
             ValidateAudience = false,
+        };
+        options.Events = new JwtBearerEvents()
+        {
+            OnMessageReceived = context =>
+            {
+                context.Token = context.Request.Cookies["token"];
+                return Task.CompletedTask;
+            }
         };
     });
 
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
+    options.AddPolicy("ClientOnly", policy => policy.RequireRole("Client"));
     
 });
 
@@ -47,7 +64,7 @@ builder.Services.AddAuthorization(options =>
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+builder.Services.AddAutoMapper(typeof(Program));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
