@@ -24,6 +24,8 @@ public class AuthorService : IAuthorService
 
     public IEnumerable<Author> GetAll(int page, int size)
     {
+        if (page <= 0)
+            page = 1;
         return _repository.GetAll<Author>().Skip((page - 1) * size).Take(size).ToList();
         
     }

@@ -53,8 +53,6 @@ public class BookController : ControllerBase
     public async Task<IActionResult> UpdateBook(int id, [FromBody] BookDTO bookDto)
     {
         var book = _mapper.Map<Book>(bookDto);
-        if (id != book.Id)
-            return BadRequest("Book ID mismatch");
 
         var existingBook = await _bookService.FindBookById(id);
         if (existingBook == null)

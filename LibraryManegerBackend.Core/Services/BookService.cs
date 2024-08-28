@@ -24,6 +24,8 @@ public class BookService : IBookService
 
     public IEnumerable<Book> GetAllBooks(int page, int size)
     {
+        if (page <= 0)
+            page = 1;
         return _repository.GetAll<Book>().Skip((page - 1) * size).Take(size).ToList();
         
     }

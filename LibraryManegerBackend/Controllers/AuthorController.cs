@@ -53,20 +53,34 @@ public class AuthorController: ControllerBase
     public async Task<IActionResult> UpdateAuthor(int id, AuthorDTO authorDto)
     {
         var author = _mapper.Map<Author>(authorDto);
-        if (id != author.Id)
-            return BadRequest("Author ID mismatch");
+        
 
         var existingAuthor = await _authorService.FindById(id);
         if (existingAuthor == null)
             return NotFound();
 
         existingAuthor.Name = author.Name;
-        existingAuthor.Id = author.Id;
         existingAuthor.Books = author.Books;
 
         try
         {
             await _authorService.Update(existingAuthor);
+            return NoContent();
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, $"Internal server error: {ex.Message}");
+        }
+    }
+    
+    
+    [HttpDelete("{id}")]
+    [Authorize(Roles = "Admin")]
+    public async Task<IActionResult> Delete( int id)
+    {
+        try
+        {
+            await _authorService.Delete(id);
             return NoContent();
         }
         catch (Exception ex)

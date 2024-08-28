@@ -42,8 +42,7 @@ public class UserController : ControllerBase
         public async Task<IActionResult> UpdateUser(int id, [FromBody] UserDTO userDtO)
         {
             var user = _mapper.Map<User>(userDtO);
-            if (id != user.Id)
-                return BadRequest("User ID mismatch");
+           
 
             var existingUser = await _userService.FindById(id);
             if (existingUser == null)

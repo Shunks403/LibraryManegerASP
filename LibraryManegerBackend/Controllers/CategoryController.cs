@@ -55,21 +55,33 @@ public class CategoryController : ControllerBase
     [Authorize(Roles = "Admin")]
     public async Task<IActionResult> UpdateCategory(int id, CategoryDTO categoryDto)
     {
-        var category = _mapper.Map<Author>(categoryDto);
-        if (id != category.Id)
-            return BadRequest("Category ID mismatch");
-
+        var category = _mapper.Map<Category>(categoryDto);
+        
         var existingCategory = await _categoryService.FindById(id);
         if (existingCategory == null)
             return NotFound();
 
         existingCategory.Name = category.Name;
-        existingCategory.Id = category.Id;
         existingCategory.Books = category.Books;
 
         try
         {
             await _categoryService.Update(existingCategory);
+            return NoContent();
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, $"Internal server error: {ex.Message}");
+        }
+    }
+    
+    [HttpDelete("{id}")]
+    [Authorize(Roles = "Admin")]
+    public async Task<IActionResult> Delete( int id)
+    {
+        try
+        {
+            await _categoryService.Delete(id);
             return NoContent();
         }
         catch (Exception ex)
