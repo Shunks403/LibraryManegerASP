@@ -3,7 +3,7 @@ using LibraryManegerBackend.Core.Models;
 
 namespace MessangerBackend.DTO;
 
-public class BookDTO
+public class BookRequest
 {
     
     public string Title { get; set; }

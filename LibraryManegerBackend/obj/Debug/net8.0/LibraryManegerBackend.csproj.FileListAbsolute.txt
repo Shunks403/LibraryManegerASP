@@ -144,3 +144,5 @@ C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend\obj\Deb
 C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend\bin\Debug\net8.0\Castle.Core.dll
+C:\Users\Nazar\RiderProjects\LibraryManegerBackend\LibraryManegerBackend\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Proxies.dll

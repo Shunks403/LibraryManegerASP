@@ -3,6 +3,7 @@ using AutoMapper;
 using LibraryManegerBackend.Core.Interfaces;
 using LibraryManegerBackend.Core.Models;
 using MessangerBackend.DTO;
+using MessangerBackend.DTO.Response;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -26,21 +27,21 @@ public class BookController : ControllerBase
     public async Task<IActionResult> GetBooks([FromQuery] int page , [FromQuery] int size)
     {
         var books =  _bookService.GetAllBooks(page,size);
-        return Ok(_mapper.Map<IEnumerable<BookDTO>>(books));
+        return Ok(_mapper.Map<IEnumerable<BookResponse>>(books));
     }
 
 
     [HttpPost]
     [Authorize(Roles = "Admin")]
-    public async Task<IActionResult> CreatBook([FromBody] BookDTO bookDto)
+    public async Task<IActionResult> CreatBook([FromBody] BookRequest bookRequest)
     {
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
 
         try
         {
-            await _bookService.AddBook(_mapper.Map<Book>(bookDto));
-            return Ok(bookDto);
+            await _bookService.AddBook(_mapper.Map<Book>(bookRequest));
+            return Ok(bookRequest);
         }
         catch (Exception ex)
         {
@@ -50,9 +51,9 @@ public class BookController : ControllerBase
     
     [HttpPut("{id}")]
     [Authorize(Roles = "Admin")]
-    public async Task<IActionResult> UpdateBook(int id, [FromBody] BookDTO bookDto)
+    public async Task<IActionResult> UpdateBook(int id, [FromBody] BookRequest bookRequest)
     {
-        var book = _mapper.Map<Book>(bookDto);
+        var book = _mapper.Map<Book>(bookRequest);
 
         var existingBook = await _bookService.FindBookById(id);
         if (existingBook == null)

@@ -15,14 +15,16 @@ var SessionTimeout = (int)builder.Configuration.GetValue(typeof(int), "SessionTi
 var TokenKey = builder.Configuration.GetValue<string>("TokenKey");
 
 // Add services to the container.
-builder.Services.AddDbContext<LibraryContext>(opt =>opt.UseSqlServer((connectionString)));
+builder.Services.AddDbContext<LibraryContext>(opt =>opt.UseSqlServer((connectionString)).UseLazyLoadingProxies());
 
 builder.Services.AddTransient<IRepository, Repository>();
 builder.Services.AddTransient<IBookService, BookService>();
 builder.Services.AddTransient<IUserService, UserService>();
 builder.Services.AddTransient<IAuthorService, AuthorService>();
 builder.Services.AddTransient<ICategoryService, CategoryService>();
+builder.Services.AddTransient<IBorrowService, BorrowService>();
 builder.Services.AddTransient<IPasswordHasher, PasswordHasher>();
+
 
 builder.Services.AddControllers();
 builder.Services.AddSession(options =>
